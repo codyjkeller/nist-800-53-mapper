@@ -1,0 +1,34 @@
+[
+  {
+    "control_id": "AC-2",
+    "title": "Account Management",
+    "nist_baseline": "Moderate",
+    "cjis_policy_ref": "5.5.1",
+    "tx_ramp_level": "Level 2",
+    "implementation_guidance": "Must use SSO (Okta/AzureAD) for all production access. Manual creation of accounts is prohibited without Change Request."
+  },
+  {
+    "control_id": "AC-7",
+    "title": "Unsuccessful Logon Attempts",
+    "nist_baseline": "Moderate",
+    "cjis_policy_ref": "5.5.3",
+    "tx_ramp_level": "Level 1",
+    "implementation_guidance": "System must lock account after 3 invalid attempts within 15 minutes. Lockout duration must be at least 30 minutes."
+  },
+  {
+    "control_id": "AU-2",
+    "title": "Event Logging",
+    "nist_baseline": "Moderate",
+    "cjis_policy_ref": "5.4.1",
+    "tx_ramp_level": "Level 2",
+    "implementation_guidance": "Audit logs must capture: Successful/Unsuccessful logons, Privilege changes, and File access. Logs must be shipped to SIEM (Datadog/Splunk)."
+  },
+  {
+    "control_id": "IA-2",
+    "title": "Identification and Authentication",
+    "nist_baseline": "High",
+    "cjis_policy_ref": "5.6.1",
+    "tx_ramp_level": "Level 2",
+    "implementation_guidance": "MFA is mandatory for all remote access and access to CJI. NIST AAL2 compliant authenticators required."
+  }
+]
